@@ -1,0 +1,13 @@
+body{
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+td{
+  height: 75px;
+  width: 75px;
+  border: 2px solid black;
+  border-radius: 40px;
+  background: gray;
+}
