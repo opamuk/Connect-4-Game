@@ -3,12 +3,10 @@ var two = prompt("Player Two: Enter Your Name , you will be Red")
 
 $('h3').text(one+": it is your turn, please pick a column to drop your blue chip.")
 
-var k=0;
-
-var last = [35,36,37,38,39,40,41]
-
+//Change the cursor to pointer as it hovers over the columns
 $('td').css('cursor','pointer')
 
+//Check if 4 chips are connected in a horizontal, vertical or diagonal row and if so announce the winner
 function checkstate(add,w){
   for(q=w;q<=35;q+=7){
     a=$('td').eq(q).css('background-color');
@@ -27,6 +25,10 @@ function checkstate(add,w){
   }
 }
 
+var k=0;                          //counter to define the player1 and player2
+var last = [35,36,37,38,39,40,41] //index numbers for the lowest(6th) row
+
+//Drop chips on clicked column and make the necessary color changes
 $('td').click(function(){
   k+=1
   var i = this.cellIndex
@@ -47,15 +49,19 @@ $('td').click(function(){
       }
     }
   }
+  //Check if the connection succeeds horizontally
   for(y=0;y<=3;y++){
     checkstate(1,y)
   }
+  //Check if the connection succeeds vertically
   for(y=0;y<=6;y++){
     checkstate(7,y)
   }
+  //Check if the connection succeeds diagonally with positive inclination
   for(y=3;y<=6;y++){
     checkstate(6,y)
   }
+  //Check if the connection succeeds diagonally with negative inclination
   for(y=0;y<=3;y++){
     checkstate(8,y)
   }
