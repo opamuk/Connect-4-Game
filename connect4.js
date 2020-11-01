@@ -66,5 +66,3 @@ $('td').click(function(){
     checkstate(8,y)
   }
 })
-
- 
