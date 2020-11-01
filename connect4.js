@@ -25,7 +25,7 @@ function checkstate(add,w){
   }
 }
 
-var k=0;                          //counter to define the player1 and player2
+var k=0;                          //counter to define whose turn it is: player1 or player2
 var last = [35,36,37,38,39,40,41] //index numbers for the lowest(6th) row
 
 //Drop chips on clicked column and make the necessary color changes
